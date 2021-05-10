@@ -24,6 +24,7 @@
 
     <application
         android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
         android:label="traffic_routing">
         <activity
             android:name=".MainActivity"

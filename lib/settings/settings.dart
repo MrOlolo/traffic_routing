@@ -1,10 +1,19 @@
 class Settings {
   ///Firebase data
-  static const databaseRoot = "json_data";
-  static const baseUrl1 = "base_url_1";
-  static const baseUrl2 = "base_url_2";
-  static const appsflyer = "appsflyer_api";
+  static const databaseRoot = "json_root_data";
+  static const baseUrl1 = "puked";
+  static const baseUrl2 = "slums";
+  static const appsflyer = "dkef3nDPGtQixBzU8DxbGT";
   static const facebook = "facebook_api";
+
+  ///data from host
+  static const urlPath = 'getDomain';
+  static const queryParamName = 'encoded_data';
+  static const url11key = 'u11';
+  static const url12key = 'u12';
+  static const url21key = 'u21';
+  static const url22key = 'u22';
+  static const overrideUrlKey = 'override_url';
 
   ///Device data
   static const mnoKey = "mno";
@@ -32,15 +41,6 @@ class Settings {
   static const isFbKey = "is_fb";
   static const afSitedKey = "af_siteid";
   static const httpReferrerKey = "http_referrer";
-
-  ///data from host
-  static const urlPath = 'getDomain';
-  static const queryParamName = 'encoded_data';
-  static const url11key = 'url_11';
-  static const url12key = 'url_12';
-  static const url21key = 'url_21';
-  static const url22key = 'url_22';
-  static const overrideUrlKey = 'override_url';
 
   ///Storage keys
   static const webViewUrl = 'webview_url';

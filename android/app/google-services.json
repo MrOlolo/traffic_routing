@@ -1,42 +1,33 @@
 {
   "project_info": {
-    "project_number": "957645126050",
-    "firebase_url": "https://traffic-routing-73483-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "traffic-routing-73483",
-    "storage_bucket": "traffic-routing-73483.appspot.com"
+    "project_number": "429304125734",
+    "project_id": "flutter-test-black",
+    "storage_bucket": "flutter-test-black.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:957645126050:android:f64fae2bab72f069565afb",
+        "mobilesdk_app_id": "1:429304125734:android:140ece48766e7ed03cc9e7",
         "android_client_info": {
-          "package_name": "com.traffic_routing"
+          "package_name": "com.fluttertest.check"
         }
       },
       "oauth_client": [
         {
-          "client_id": "957645126050-kt1mjpeqs6hu35ge5t3d0j45jl4uc5s3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.traffic_routing",
-            "certificate_hash": "f3c2e372424cc1b18c50595a93b638197b3f1476"
-          }
-        },
-        {
-          "client_id": "957645126050-0r5bdacti6386oo614c0gtgslhjjlvkv.apps.googleusercontent.com",
+          "client_id": "429304125734-mnaq6lk5l9tcbg9n7lhcs36sh7gbv4ma.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC_G5hxoAN0GyYaDHxaaKwk-h3xjmoA3z4"
+          "current_key": "AIzaSyCLFcR8MnPSyoSiUFv9q9Mb9QqnDzKulrg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "957645126050-0r5bdacti6386oo614c0gtgslhjjlvkv.apps.googleusercontent.com",
+              "client_id": "429304125734-mnaq6lk5l9tcbg9n7lhcs36sh7gbv4ma.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

