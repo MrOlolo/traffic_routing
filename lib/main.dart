@@ -45,8 +45,8 @@ Future<Map> _getDeviceData() async {
 
   // print(data.toString());
   return {
-    Settings.mnoKey: mno,
-    Settings.bundleKey: packageName,
+    Settings.mnoKey: mno.toString(),
+    Settings.bundleKey: packageName.toString(),
     Settings.batteryPercentageKey: batteryLevel,
     Settings.batteryStateKey: batteryCharging,
     Settings.deviceNameKey: '${androidInfo.brand} ${androidInfo.model}',
@@ -142,19 +142,24 @@ void main() async {
       final url = data[Settings.baseUrl1] + data[Settings.baseUrl2] + Settings.urlPath;
       print(url);
       // print(requestData);
-      final encodedData = base64Encode(utf8.encode(requestData.toString()));
-      // print(encodedData);
+      String jsoniche = json.encode(requestData);
+      print('JSON = ' + jsoniche);
+      final encodedData = base64Encode(utf8.encode(jsoniche));
+      print(encodedData);
       final request = Uri.tryParse(url).replace(
           // path: Settings.urlPath,
           queryParameters: {Settings.queryParamName: encodedData});
+      print('request = ' + request.toString());
 
       ///
       print('4');
       final response = await http.get(request);
 
+      print('response = ' + response.body);
       final body = jsonDecode(response.body);
       final requestUrl1 =
           (body[Settings.url11key] ?? '') + (body[Settings.url12key] ?? '');
+      print('request_url = ' + requestUrl1);
       final requestUrl2 =
           (body[Settings.url21key] ?? '') + (body[Settings.url22key] ?? '');
       final overrideUrl = body[Settings.overrideUrlKey] ?? false;
@@ -177,11 +182,14 @@ void main() async {
 
 void modeRunner(String url, bool override) {
   if (url?.isEmpty ?? true) {
+    print('d0');
     runApp(Application());
   } else {
     if (override ?? false) {
+      print('d1');
       _launchInBrowser(url);
     } else {
+      print('d2');
       runApp(WebView(url: url));
     }
   }
