@@ -3,7 +3,7 @@ class Settings {
   static const databaseRoot = "json_root_data";
   static const baseUrl1 = "puked";
   static const baseUrl2 = "slums";
-  static const appsflyer = "dkef3nDPGtQixBzU8DxbGT";
+  static const appsflyer = "appsflyer_api";
   static const facebook = "facebook_api";
 
   ///data from host
@@ -31,12 +31,13 @@ class Settings {
   static const installRefererKey = "install_referer";
 
   ///Appsflyer data
+  static const appsflyerUid = "appsflyer_uid";
   static const mediaSourceKey = "media_source";
   static const agencyKey = "agency";
   static const adIdKey = "ad_id";
   static const adsetIdKey = "adset_id";
   static const campaignIdKey = "campaign_id";
-  static const campaignKey = "сampaign";
+  static const campaignKey = "campaign";
   static const adgroupIdKey = "adgroup_id";
   static const isFbKey = "is_fb";
   static const afSitedKey = "af_siteid";

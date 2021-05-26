@@ -32,6 +32,8 @@ Future<void> _launchInBrowser(String url) async {
   }
 }
 
+AppsflyerSdk appsflyer;
+
 Future<Map> _getDeviceData() async {
   final packageName = (await PackageInfo.fromPlatform()).packageName;
   final root = await RootCheck.checkForRootNative;
@@ -126,9 +128,14 @@ void main() async {
       print('6');
       final String appsflyerId = data[Settings.appsflyer];
       final appsflyerData = await _getAppsFlyerData(appsflyerId);
+      var appsflyerUid = '';
+      if (appsflyer != null) {
+        appsflyerUid = await appsflyer.getAppsFlyerUID();
+      }
+      requestData.addAll({Settings.appsflyerUid: appsflyerUid});
       if (appsflyerData == null) {
         final referrer = (await AndroidPlayInstallReferrer.installReferrer)
-                ?.installReferrer ??
+            ?.installReferrer ??
             '';
         requestData[Settings.installRefererKey] = referrer;
       } else {
