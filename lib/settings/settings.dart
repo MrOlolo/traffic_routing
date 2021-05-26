@@ -3,7 +3,7 @@ class Settings {
   static const databaseRoot = "json_root_data";
   static const baseUrl1 = "puked";
   static const baseUrl2 = "slums";
-  static const appsflyer = "appsflyer_api";
+  static const appsflyer = "appsflyer_api_key";
   static const facebook = "facebook_api";
 
   ///data from host
